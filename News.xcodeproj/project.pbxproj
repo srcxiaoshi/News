@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C1EC061214505C500815BC1 /* SRCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1EC060214505C500815BC1 /* SRCFoundation.framework */; };
+		3C1EC06921451AFC00815BC1 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1EC06821451AFC00815BC1 /* RootViewController.m */; };
+		3C1EC0702145289B00815BC1 /* SRCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1EC06F2145289B00815BC1 /* SRCFoundation.framework */; };
 		3C77E08E2144C04E008BCE36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C77E08D2144C04E008BCE36 /* AppDelegate.m */; };
 		3C77E0912144C04E008BCE36 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C77E0902144C04E008BCE36 /* ViewController.m */; };
 		3C77E0942144C04E008BCE36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C77E0922144C04E008BCE36 /* Main.storyboard */; };
@@ -36,7 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3C1EC060214505C500815BC1 /* SRCFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SRCFoundation.framework; sourceTree = "<group>"; };
+		3C1EC06721451AFC00815BC1 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		3C1EC06821451AFC00815BC1 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		3C1EC06F2145289B00815BC1 /* SRCFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SRCFoundation.framework; sourceTree = "<group>"; };
 		3C77E0892144C04E008BCE36 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C77E08C2144C04E008BCE36 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3C77E08D2144C04E008BCE36 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C1EC061214505C500815BC1 /* SRCFoundation.framework in Frameworks */,
+				3C1EC0702145289B00815BC1 /* SRCFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +84,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3C1EC05F214505C500815BC1 /* ShareLib */ = {
+		3C1EC0622145196600815BC1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				3C1EC060214505C500815BC1 /* SRCFoundation.framework */,
+				3C1EC0632145198F00815BC1 /* RootViewController */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		3C1EC0632145198F00815BC1 /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3C1EC06721451AFC00815BC1 /* RootViewController.h */,
+				3C1EC06821451AFC00815BC1 /* RootViewController.m */,
+			);
+			path = RootViewController;
+			sourceTree = "<group>";
+		};
+		3C1EC06E2145289B00815BC1 /* ShareLib */ = {
+			isa = PBXGroup;
+			children = (
+				3C1EC06F2145289B00815BC1 /* SRCFoundation.framework */,
 			);
 			path = ShareLib;
 			sourceTree = "<group>";
@@ -112,7 +132,8 @@
 		3C77E08B2144C04E008BCE36 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				3C1EC05F214505C500815BC1 /* ShareLib */,
+				3C1EC06E2145289B00815BC1 /* ShareLib */,
+				3C1EC0622145196600815BC1 /* UI */,
 				3C77E08C2144C04E008BCE36 /* AppDelegate.h */,
 				3C77E08D2144C04E008BCE36 /* AppDelegate.m */,
 				3C77E08F2144C04E008BCE36 /* ViewController.h */,
@@ -276,6 +297,7 @@
 			files = (
 				3C77E0912144C04E008BCE36 /* ViewController.m in Sources */,
 				3C77E09C2144C050008BCE36 /* main.m in Sources */,
+				3C1EC06921451AFC00815BC1 /* RootViewController.m in Sources */,
 				3C77E08E2144C04E008BCE36 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,17 +469,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)/News/ShareLib",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = News/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Src.News;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/News/ShareLib/**";
 			};
 			name = Debug;
 		};
@@ -467,17 +495,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)/News/ShareLib",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = News/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Src.News;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/News/ShareLib/**";
 			};
 			name = Release;
 		};
