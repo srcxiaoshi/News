@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C1EC06921451AFC00815BC1 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1EC06821451AFC00815BC1 /* RootViewController.m */; };
-		3C1EC0702145289B00815BC1 /* SRCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1EC06F2145289B00815BC1 /* SRCFoundation.framework */; };
+		3C1EC0D2214614E500815BC1 /* NetworkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1EC0D1214614E500815BC1 /* NetworkModel.m */; };
 		3C77E08E2144C04E008BCE36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C77E08D2144C04E008BCE36 /* AppDelegate.m */; };
 		3C77E0912144C04E008BCE36 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C77E0902144C04E008BCE36 /* ViewController.m */; };
 		3C77E0942144C04E008BCE36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C77E0922144C04E008BCE36 /* Main.storyboard */; };
@@ -17,6 +16,19 @@
 		3C77E09C2144C050008BCE36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C77E09B2144C050008BCE36 /* main.m */; };
 		3C77E0A62144C050008BCE36 /* NewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C77E0A52144C050008BCE36 /* NewsTests.m */; };
 		3C77E0B12144C050008BCE36 /* NewsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C77E0B02144C050008BCE36 /* NewsUITests.m */; };
+		3CBE271D2148A4A80028F1FA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE271B2148A4A80028F1FA /* RootViewController.m */; };
+		3CBE273F2148AFA20028F1FA /* SRCUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBE273D2148AFA20028F1FA /* SRCUIKit.framework */; };
+		3CBE27402148AFA20028F1FA /* SRCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBE273E2148AFA20028F1FA /* SRCFoundation.framework */; };
+		3CBE276F2148EF500028F1FA /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE276E2148EF500028F1FA /* AppModel.m */; };
+		3CBE27722148F01C0028F1FA /* HomePageUIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE27712148F01C0028F1FA /* HomePageUIConfig.m */; };
+		3CBE27752148F0850028F1FA /* TabConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE27742148F0850028F1FA /* TabConfig.m */; };
+		3CBE27782148F0E50028F1FA /* TopBarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE27772148F0E50028F1FA /* TopBarConfig.m */; };
+		3CBE277B2148F1B20028F1FA /* TopBarUINormalAndSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE277A2148F1B20028F1FA /* TopBarUINormalAndSearch.m */; };
+		3CBE27812148FFC40028F1FA /* StartTabConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE27802148FFC40028F1FA /* StartTabConfig.m */; };
+		3CBE2784214902C20028F1FA /* TabItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE2783214902C20028F1FA /* TabItemModel.m */; };
+		3CBE2788214907650028F1FA /* TabListConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE2787214907650028F1FA /* TabListConfig.m */; };
+		3CBE278B21490E3B0028F1FA /* AppDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE278A21490E3B0028F1FA /* AppDataModel.m */; };
+		3CBE278E21490F3B0028F1FA /* AppNetworkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE278D21490F3B0028F1FA /* AppNetworkModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3C1EC06721451AFC00815BC1 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		3C1EC06821451AFC00815BC1 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		3C1EC06F2145289B00815BC1 /* SRCFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SRCFoundation.framework; sourceTree = "<group>"; };
+		3C1EC0D0214614E500815BC1 /* NetworkModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkModel.h; sourceTree = "<group>"; };
+		3C1EC0D1214614E500815BC1 /* NetworkModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkModel.m; sourceTree = "<group>"; };
 		3C77E0892144C04E008BCE36 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C77E08C2144C04E008BCE36 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3C77E08D2144C04E008BCE36 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,6 +67,30 @@
 		3C77E0AC2144C050008BCE36 /* NewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C77E0B02144C050008BCE36 /* NewsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsUITests.m; sourceTree = "<group>"; };
 		3C77E0B22144C050008BCE36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CBE271B2148A4A80028F1FA /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		3CBE271C2148A4A80028F1FA /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		3CBE273D2148AFA20028F1FA /* SRCUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SRCUIKit.framework; sourceTree = "<group>"; };
+		3CBE273E2148AFA20028F1FA /* SRCFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SRCFoundation.framework; sourceTree = "<group>"; };
+		3CBE276D2148EF500028F1FA /* AppModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppModel.h; sourceTree = "<group>"; };
+		3CBE276E2148EF500028F1FA /* AppModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
+		3CBE27702148F01C0028F1FA /* HomePageUIConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageUIConfig.h; sourceTree = "<group>"; };
+		3CBE27712148F01C0028F1FA /* HomePageUIConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageUIConfig.m; sourceTree = "<group>"; };
+		3CBE27732148F0850028F1FA /* TabConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabConfig.h; sourceTree = "<group>"; };
+		3CBE27742148F0850028F1FA /* TabConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabConfig.m; sourceTree = "<group>"; };
+		3CBE27762148F0E50028F1FA /* TopBarConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopBarConfig.h; sourceTree = "<group>"; };
+		3CBE27772148F0E50028F1FA /* TopBarConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopBarConfig.m; sourceTree = "<group>"; };
+		3CBE27792148F1B20028F1FA /* TopBarUINormalAndSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopBarUINormalAndSearch.h; sourceTree = "<group>"; };
+		3CBE277A2148F1B20028F1FA /* TopBarUINormalAndSearch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopBarUINormalAndSearch.m; sourceTree = "<group>"; };
+		3CBE277F2148FFC40028F1FA /* StartTabConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartTabConfig.h; sourceTree = "<group>"; };
+		3CBE27802148FFC40028F1FA /* StartTabConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartTabConfig.m; sourceTree = "<group>"; };
+		3CBE2782214902C20028F1FA /* TabItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabItemModel.h; sourceTree = "<group>"; };
+		3CBE2783214902C20028F1FA /* TabItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabItemModel.m; sourceTree = "<group>"; };
+		3CBE2786214907650028F1FA /* TabListConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabListConfig.h; sourceTree = "<group>"; };
+		3CBE2787214907650028F1FA /* TabListConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabListConfig.m; sourceTree = "<group>"; };
+		3CBE278921490E3B0028F1FA /* AppDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDataModel.h; sourceTree = "<group>"; };
+		3CBE278A21490E3B0028F1FA /* AppDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDataModel.m; sourceTree = "<group>"; };
+		3CBE278C21490F3B0028F1FA /* AppNetworkModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppNetworkModel.h; sourceTree = "<group>"; };
+		3CBE278D21490F3B0028F1FA /* AppNetworkModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppNetworkModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C1EC0702145289B00815BC1 /* SRCFoundation.framework in Frameworks */,
+				3CBE27402148AFA20028F1FA /* SRCFoundation.framework in Frameworks */,
+				3CBE273F2148AFA20028F1FA /* SRCUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,26 +123,27 @@
 		3C1EC0622145196600815BC1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				3C1EC0632145198F00815BC1 /* RootViewController */,
+				3CBE271A2148A4A80028F1FA /* RootViewController */,
 			);
 			path = UI;
 			sourceTree = "<group>";
 		};
-		3C1EC0632145198F00815BC1 /* RootViewController */ = {
+		3C1EC08D214600A900815BC1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3C1EC06721451AFC00815BC1 /* RootViewController.h */,
-				3C1EC06821451AFC00815BC1 /* RootViewController.m */,
+				3C1EC0CF214614CE00815BC1 /* Network */,
 			);
-			path = RootViewController;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		3C1EC06E2145289B00815BC1 /* ShareLib */ = {
+		3C1EC0CF214614CE00815BC1 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				3C1EC06F2145289B00815BC1 /* SRCFoundation.framework */,
+				3CBE276C2148EF3B0028F1FA /* APP */,
+				3C1EC0D0214614E500815BC1 /* NetworkModel.h */,
+				3C1EC0D1214614E500815BC1 /* NetworkModel.m */,
 			);
-			path = ShareLib;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		3C77E0802144C04E008BCE36 = {
@@ -132,7 +169,8 @@
 		3C77E08B2144C04E008BCE36 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				3C1EC06E2145289B00815BC1 /* ShareLib */,
+				3CBE273C2148AFA20028F1FA /* ShareLib */,
+				3C1EC08D214600A900815BC1 /* Model */,
 				3C1EC0622145196600815BC1 /* UI */,
 				3C77E08C2144C04E008BCE36 /* AppDelegate.h */,
 				3C77E08D2144C04E008BCE36 /* AppDelegate.m */,
@@ -163,6 +201,51 @@
 				3C77E0B22144C050008BCE36 /* Info.plist */,
 			);
 			path = NewsUITests;
+			sourceTree = "<group>";
+		};
+		3CBE271A2148A4A80028F1FA /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3CBE271C2148A4A80028F1FA /* RootViewController.h */,
+				3CBE271B2148A4A80028F1FA /* RootViewController.m */,
+			);
+			path = RootViewController;
+			sourceTree = "<group>";
+		};
+		3CBE273C2148AFA20028F1FA /* ShareLib */ = {
+			isa = PBXGroup;
+			children = (
+				3CBE273D2148AFA20028F1FA /* SRCUIKit.framework */,
+				3CBE273E2148AFA20028F1FA /* SRCFoundation.framework */,
+			);
+			path = ShareLib;
+			sourceTree = "<group>";
+		};
+		3CBE276C2148EF3B0028F1FA /* APP */ = {
+			isa = PBXGroup;
+			children = (
+				3CBE278921490E3B0028F1FA /* AppDataModel.h */,
+				3CBE278A21490E3B0028F1FA /* AppDataModel.m */,
+				3CBE276D2148EF500028F1FA /* AppModel.h */,
+				3CBE276E2148EF500028F1FA /* AppModel.m */,
+				3CBE27702148F01C0028F1FA /* HomePageUIConfig.h */,
+				3CBE27712148F01C0028F1FA /* HomePageUIConfig.m */,
+				3CBE277F2148FFC40028F1FA /* StartTabConfig.h */,
+				3CBE27802148FFC40028F1FA /* StartTabConfig.m */,
+				3CBE27732148F0850028F1FA /* TabConfig.h */,
+				3CBE27742148F0850028F1FA /* TabConfig.m */,
+				3CBE2782214902C20028F1FA /* TabItemModel.h */,
+				3CBE2783214902C20028F1FA /* TabItemModel.m */,
+				3CBE2786214907650028F1FA /* TabListConfig.h */,
+				3CBE2787214907650028F1FA /* TabListConfig.m */,
+				3CBE27762148F0E50028F1FA /* TopBarConfig.h */,
+				3CBE27772148F0E50028F1FA /* TopBarConfig.m */,
+				3CBE27792148F1B20028F1FA /* TopBarUINormalAndSearch.h */,
+				3CBE277A2148F1B20028F1FA /* TopBarUINormalAndSearch.m */,
+				3CBE278C21490F3B0028F1FA /* AppNetworkModel.h */,
+				3CBE278D21490F3B0028F1FA /* AppNetworkModel.m */,
+			);
+			path = APP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,9 +379,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C77E0912144C04E008BCE36 /* ViewController.m in Sources */,
+				3CBE278E21490F3B0028F1FA /* AppNetworkModel.m in Sources */,
+				3CBE27782148F0E50028F1FA /* TopBarConfig.m in Sources */,
+				3CBE2788214907650028F1FA /* TabListConfig.m in Sources */,
+				3CBE276F2148EF500028F1FA /* AppModel.m in Sources */,
 				3C77E09C2144C050008BCE36 /* main.m in Sources */,
-				3C1EC06921451AFC00815BC1 /* RootViewController.m in Sources */,
+				3CBE27752148F0850028F1FA /* TabConfig.m in Sources */,
+				3CBE27722148F01C0028F1FA /* HomePageUIConfig.m in Sources */,
+				3CBE278B21490E3B0028F1FA /* AppDataModel.m in Sources */,
+				3CBE277B2148F1B20028F1FA /* TopBarUINormalAndSearch.m in Sources */,
+				3C1EC0D2214614E500815BC1 /* NetworkModel.m in Sources */,
+				3CBE2784214902C20028F1FA /* TabItemModel.m in Sources */,
 				3C77E08E2144C04E008BCE36 /* AppDelegate.m in Sources */,
+				3CBE27812148FFC40028F1FA /* StartTabConfig.m in Sources */,
+				3CBE271D2148A4A80028F1FA /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,15 +563,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/News/ShareLib",
+					"$(PROJECT_DIR)/News/ShareLib/**",
 					"$(inherited)",
+					"$(PROJECT_DIR)/News/ShareLib",
 				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/News/ShareLib/**";
 				INFOPLIST_FILE = News/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/News/ShareLib/**";
 				OTHER_LDFLAGS = (
 					"-Objc",
 					"-all_load",
@@ -495,15 +591,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/News/ShareLib",
+					"$(PROJECT_DIR)/News/ShareLib/**",
 					"$(inherited)",
+					"$(PROJECT_DIR)/News/ShareLib",
 				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/News/ShareLib/**";
 				INFOPLIST_FILE = News/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/News/ShareLib/**";
 				OTHER_LDFLAGS = (
 					"-Objc",
 					"-all_load",
