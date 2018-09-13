@@ -29,6 +29,11 @@
 		3CBE2788214907650028F1FA /* TabListConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE2787214907650028F1FA /* TabListConfig.m */; };
 		3CBE278B21490E3B0028F1FA /* AppDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE278A21490E3B0028F1FA /* AppDataModel.m */; };
 		3CBE278E21490F3B0028F1FA /* AppNetworkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE278D21490F3B0028F1FA /* AppNetworkModel.m */; };
+		3CCEC726214A4B47001CC6B4 /* StreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC724214A4B47001CC6B4 /* StreamViewController.m */; };
+		3CCEC72D214A4C7C001CC6B4 /* AddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC72C214A4C7C001CC6B4 /* AddFriendViewController.m */; };
+		3CCEC730214A4C8A001CC6B4 /* HuoShanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC72F214A4C8A001CC6B4 /* HuoShanViewController.m */; };
+		3CCEC733214A4C97001CC6B4 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC732214A4C97001CC6B4 /* MineViewController.m */; };
+		3CCEC736214A4CA8001CC6B4 /* WaterMelonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEC735214A4CA8001CC6B4 /* WaterMelonViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +96,16 @@
 		3CBE278A21490E3B0028F1FA /* AppDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDataModel.m; sourceTree = "<group>"; };
 		3CBE278C21490F3B0028F1FA /* AppNetworkModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppNetworkModel.h; sourceTree = "<group>"; };
 		3CBE278D21490F3B0028F1FA /* AppNetworkModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppNetworkModel.m; sourceTree = "<group>"; };
+		3CCEC724214A4B47001CC6B4 /* StreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamViewController.m; sourceTree = "<group>"; };
+		3CCEC725214A4B47001CC6B4 /* StreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamViewController.h; sourceTree = "<group>"; };
+		3CCEC72B214A4C7C001CC6B4 /* AddFriendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddFriendViewController.h; sourceTree = "<group>"; };
+		3CCEC72C214A4C7C001CC6B4 /* AddFriendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddFriendViewController.m; sourceTree = "<group>"; };
+		3CCEC72E214A4C8A001CC6B4 /* HuoShanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HuoShanViewController.h; sourceTree = "<group>"; };
+		3CCEC72F214A4C8A001CC6B4 /* HuoShanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuoShanViewController.m; sourceTree = "<group>"; };
+		3CCEC731214A4C97001CC6B4 /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		3CCEC732214A4C97001CC6B4 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		3CCEC734214A4CA8001CC6B4 /* WaterMelonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterMelonViewController.h; sourceTree = "<group>"; };
+		3CCEC735214A4CA8001CC6B4 /* WaterMelonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterMelonViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +138,12 @@
 		3C1EC0622145196600815BC1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3CCEC728214A4C2D001CC6B4 /* AddFriendViewController */,
+				3CCEC72A214A4C63001CC6B4 /* HuoShanViewController */,
+				3CCEC727214A4B5E001CC6B4 /* MineViewController */,
 				3CBE271A2148A4A80028F1FA /* RootViewController */,
+				3CCEC723214A4B47001CC6B4 /* StreamViewController */,
+				3CCEC729214A4C2D001CC6B4 /* WaterMelonViewController */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -246,6 +266,51 @@
 				3CBE278D21490F3B0028F1FA /* AppNetworkModel.m */,
 			);
 			path = APP;
+			sourceTree = "<group>";
+		};
+		3CCEC723214A4B47001CC6B4 /* StreamViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3CCEC724214A4B47001CC6B4 /* StreamViewController.m */,
+				3CCEC725214A4B47001CC6B4 /* StreamViewController.h */,
+			);
+			path = StreamViewController;
+			sourceTree = "<group>";
+		};
+		3CCEC727214A4B5E001CC6B4 /* MineViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3CCEC731214A4C97001CC6B4 /* MineViewController.h */,
+				3CCEC732214A4C97001CC6B4 /* MineViewController.m */,
+			);
+			path = MineViewController;
+			sourceTree = "<group>";
+		};
+		3CCEC728214A4C2D001CC6B4 /* AddFriendViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3CCEC72B214A4C7C001CC6B4 /* AddFriendViewController.h */,
+				3CCEC72C214A4C7C001CC6B4 /* AddFriendViewController.m */,
+			);
+			path = AddFriendViewController;
+			sourceTree = "<group>";
+		};
+		3CCEC729214A4C2D001CC6B4 /* WaterMelonViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3CCEC734214A4CA8001CC6B4 /* WaterMelonViewController.h */,
+				3CCEC735214A4CA8001CC6B4 /* WaterMelonViewController.m */,
+			);
+			path = WaterMelonViewController;
+			sourceTree = "<group>";
+		};
+		3CCEC72A214A4C63001CC6B4 /* HuoShanViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3CCEC72E214A4C8A001CC6B4 /* HuoShanViewController.h */,
+				3CCEC72F214A4C8A001CC6B4 /* HuoShanViewController.m */,
+			);
+			path = HuoShanViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,12 +449,17 @@
 				3CBE2788214907650028F1FA /* TabListConfig.m in Sources */,
 				3CBE276F2148EF500028F1FA /* AppModel.m in Sources */,
 				3C77E09C2144C050008BCE36 /* main.m in Sources */,
+				3CCEC733214A4C97001CC6B4 /* MineViewController.m in Sources */,
 				3CBE27752148F0850028F1FA /* TabConfig.m in Sources */,
+				3CCEC72D214A4C7C001CC6B4 /* AddFriendViewController.m in Sources */,
 				3CBE27722148F01C0028F1FA /* HomePageUIConfig.m in Sources */,
+				3CCEC730214A4C8A001CC6B4 /* HuoShanViewController.m in Sources */,
 				3CBE278B21490E3B0028F1FA /* AppDataModel.m in Sources */,
 				3CBE277B2148F1B20028F1FA /* TopBarUINormalAndSearch.m in Sources */,
 				3C1EC0D2214614E500815BC1 /* NetworkModel.m in Sources */,
+				3CCEC736214A4CA8001CC6B4 /* WaterMelonViewController.m in Sources */,
 				3CBE2784214902C20028F1FA /* TabItemModel.m in Sources */,
+				3CCEC726214A4B47001CC6B4 /* StreamViewController.m in Sources */,
 				3C77E08E2144C04E008BCE36 /* AppDelegate.m in Sources */,
 				3CBE27812148FFC40028F1FA /* StartTabConfig.m in Sources */,
 				3CBE271D2148A4A80028F1FA /* RootViewController.m in Sources */,

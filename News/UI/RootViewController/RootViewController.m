@@ -10,9 +10,15 @@
 #import <SRCFoundation/SRCFoundation.h>
 #import "AppNetworkModel.h"
 
+#import "StreamViewController.h"
+#import "WaterMelonViewController.h"
+#import "MineViewController.h"
+#import "HuoShanViewController.h"
+#import "AddFriendViewController.h"
+//这里好像还有一个红包页？？
 
 #define TAB_VIEW_CONTROLLER_CHANGE      @"tab_view_controller_change"
-#define TAB_CONFIG     @"tt_start_tab_config"
+#define APP_SETTING_CONFIG     @"tt_app_setting_config"
 
 
 
@@ -58,16 +64,8 @@
     return _configTabArr;
 }
 
--(UITabBarController *)tabBarController
-{
-    if(!_tabBarController)
-    {
-        _tabBarController=[[UITabBarController alloc] init];
-    }
-    return _tabBarController;
-}
 
-
+//UI
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -85,18 +83,36 @@
     if(![self loadStartTabConfig])
     {
         //这里是第一次加载或者是UI过期情况下
-        
+        [self loadDefaultController];
     }
     else
     {
         //这里使用配置的
-        
+        NSLog(@"2%@",self.configTabArr);
     }
     
-    
-    
-    
 }
+
+//default UIController
+-(void)loadDefaultController
+{
+    StreamViewController *streamViewController = [[StreamViewController alloc] init];
+    
+    UIImage *mainframeImage   = [UIImage imageNamed:@"tabbar_mainframe"];
+    UIImage *mainframeHLImage = [UIImage imageNamed:@"tabbar_mainframeHL"];
+    
+    mainframeViewController.title = @"微信";
+    mainframeViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"微信" image:mainframeImage selectedImage:mainframeHLImage];
+    mainframeViewController.tabBarItem.badgeValue = @"9";
+    mainframeViewController.view.backgroundColor = [UIColor colorWithRed:48 / 255.0 green:67 / 255.0 blue:78 / 255.0 alpha:1];
+    mainframeViewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_add"]
+                                                                                                 style:UIBarButtonItemStylePlain
+                                                                                                target:self
+                                                                                                action:@selector(didClickAddButton:)];
+
+}
+
+
 
 //配置tab_config 使用默认的返回no, no的情况下，使用默认的；
 //返回yes的话，使用configTabArr中的数据
@@ -104,31 +120,115 @@
 {
     //利用NSUserDefault 类配置tab
     NSUserDefaults *userDefault=[NSUserDefaults standardUserDefaults];
-    NSDictionary *dic=[userDefault objectForKey:TAB_CONFIG];
-    if(!dic)
+    NSString *stringData=[userDefault objectForKey:APP_SETTING_CONFIG];
+    
+    if(!stringData)
     {
+        __weak typeof(self) weakSelf=self;
         //去获取，并重新写入到userDefault中 TAB_CONFIG
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            [SRCNetworkWithAF requestGetMethodWithPath:@"http://ib.snssdk.com/service/settings/v2/?version_code=6.8.8&tma_jssdk_version=1.0.2.0&app_name=news_article&vid=99224CE7-E7D5-4B10-B3A1-402740301CA5&device_id=47982195078&channel=App%20Store&resolution=1125*2436&aid=13&ab_feature=201616,z1&ab_group=201616&update_version_code=68824&openudid=7c9b9a6b7abcbe4e79054ee4521e172ca5828555&idfv=99224CE7-E7D5-4B10-B3A1-402740301CA5&ac=WIFI&os_version=11.4.1&ssmix=a&device_platform=iphone&iid=43721270080&ab_client=a1,f2,f7,e1&device_type=iPhone%20X&idfa=B4E58BEB-9B3D-4993-A66F-54D0E949ECF1&device_id=47982195078&iid=43721270080&app=1&aid=13&update_version_code=68824&app_name=news_article&default=1&as=a2658b79d2afcbdcf81040&ts=1536736498" parameters:nil withProgress:nil success:^(BOOL isSuccess, NSString *response) {
-                __autoreleasing JSONModelError *err=nil;
-                AppNetworkModel *model=[[AppNetworkModel alloc] initWithString:response error:&err];
-                if(model)
+            [SRCNetworkWithAF requestGetMethodWithPath:@"https://is.snssdk.com/service/settings/v2/" parameters:nil withProgress:nil success:^(BOOL isSuccess, NSString *response) {
+                if(![NSString safe_isEmpty:response])
                 {
-                    NSLog(@"qq=%@",model.data);
+                    __autoreleasing JSONModelError *err=nil;
+                    AppNetworkModel *model=[[AppNetworkModel alloc] safe_initWithString:response error:&err];
+                    if(model)
+                    {
+                        //这里要讲需要的setting写到userDefault中
+                        [userDefault setObject:response forKey:APP_SETTING_CONFIG];
+                    }
+                    if(err)
+                    {
+                        //这里是解析错误，需要json解析查找问题，或者重新解析？?
+                        NSLog(@"err=%@",err);
+                    }
                 }
-                if(err)
-                {
-                    NSLog(@"err=%@",err);
-                }
+
+                
             } failure:^(NSError *error) {
-                NSLog(@"error");
+                //重新请求
+                __strong typeof(weakSelf) strongSelf=weakSelf;
+                [strongSelf loadStartTabConfig];
+                NSLog(@"setting_error\n");
             }];
         }) ;
         return NO;
     }
     else
     {
-        return YES;
+        //将data转成对象
+        __autoreleasing JSONModelError *err=nil;
+        AppNetworkModel *appModel=[[AppNetworkModel alloc] safe_initWithString:stringData error:&err];
+        if(err)
+        {
+            //这里是解析错误，需要json解析查找问题，或者重新解析？?
+            NSLog(@"err=%@",err);
+            return NO;
+        }
+        if(appModel&&appModel.data&&appModel.data.app.tt_start_tab_config&&appModel.data.app.tt_tab_list_config)
+        {
+            TabListConfig *tabList=appModel.data.app.tt_tab_list_config;
+            StartTabConfig *startTabConf=appModel.data.app.tt_start_tab_config;
+            //这里将数据放到self configTabArr 中
+            long time=(long)[[NSDate date] timeIntervalSince1970];
+            if(!startTabConf.expired_time)
+            {
+                return NO;
+            }
+            
+            if(time>=startTabConf.expired_time.longValue)
+            {
+                if(startTabConf.tab_config&&[startTabConf.tab_config count]>0)
+                {
+                    //清空 self configTabArr
+                    self.configTabArr=[NSMutableArray new];
+                    //可以用，没有过期
+                    for(TabItemModel *model in startTabConf.tab_config)
+                    {
+                        [self.configTabArr safe_addObject:model];
+                    }
+                    if(tabList.middle_tab)
+                    {
+                        [[self configTabArr] safe_addObject:tabList.middle_tab];
+                    }
+                    if(tabList.normal_tabs&&[tabList.normal_tabs count]>0)
+                    {
+                        for(NSString *string in tabList.normal_tabs)
+                        {
+                            //这里只有名字，应该是用来选icon的
+                            TabItemModel *model=[[TabItemModel alloc] init];
+                            if(![NSString safe_isEmpty:string])
+                            {
+                                model.tab_name=string;
+                                [self.configTabArr safe_addObject:model];
+                            }
+                            else
+                            {
+                                ERROR();
+                                return NO;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        return NO;
+                    }
+                    return YES;
+                }
+                else
+                {
+                    return NO;
+                }
+            }
+            else
+            {
+                //清空userDefault
+                [userDefault removeObjectForKey:APP_SETTING_CONFIG];
+                return NO;
+            }
+            
+        }
+        return NO;
     }
     
 }
