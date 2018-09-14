@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3C1EC0D2214614E500815BC1 /* NetworkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1EC0D1214614E500815BC1 /* NetworkModel.m */; };
+		3C24E9AC214BE0180026B141 /* SRCUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C24E9AA214BE0180026B141 /* SRCUIKit.framework */; };
+		3C24E9AD214BE0180026B141 /* SRCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C24E9AB214BE0180026B141 /* SRCFoundation.framework */; };
 		3C77E08E2144C04E008BCE36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C77E08D2144C04E008BCE36 /* AppDelegate.m */; };
 		3C77E0912144C04E008BCE36 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C77E0902144C04E008BCE36 /* ViewController.m */; };
 		3C77E0942144C04E008BCE36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C77E0922144C04E008BCE36 /* Main.storyboard */; };
@@ -17,8 +19,6 @@
 		3C77E0A62144C050008BCE36 /* NewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C77E0A52144C050008BCE36 /* NewsTests.m */; };
 		3C77E0B12144C050008BCE36 /* NewsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C77E0B02144C050008BCE36 /* NewsUITests.m */; };
 		3CBE271D2148A4A80028F1FA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE271B2148A4A80028F1FA /* RootViewController.m */; };
-		3CBE273F2148AFA20028F1FA /* SRCUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBE273D2148AFA20028F1FA /* SRCUIKit.framework */; };
-		3CBE27402148AFA20028F1FA /* SRCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBE273E2148AFA20028F1FA /* SRCFoundation.framework */; };
 		3CBE276F2148EF500028F1FA /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE276E2148EF500028F1FA /* AppModel.m */; };
 		3CBE27722148F01C0028F1FA /* HomePageUIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE27712148F01C0028F1FA /* HomePageUIConfig.m */; };
 		3CBE27752148F0850028F1FA /* TabConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE27742148F0850028F1FA /* TabConfig.m */; };
@@ -56,6 +56,8 @@
 /* Begin PBXFileReference section */
 		3C1EC0D0214614E500815BC1 /* NetworkModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkModel.h; sourceTree = "<group>"; };
 		3C1EC0D1214614E500815BC1 /* NetworkModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkModel.m; sourceTree = "<group>"; };
+		3C24E9AA214BE0180026B141 /* SRCUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SRCUIKit.framework; sourceTree = "<group>"; };
+		3C24E9AB214BE0180026B141 /* SRCFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SRCFoundation.framework; sourceTree = "<group>"; };
 		3C77E0892144C04E008BCE36 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C77E08C2144C04E008BCE36 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3C77E08D2144C04E008BCE36 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -74,8 +76,6 @@
 		3C77E0B22144C050008BCE36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CBE271B2148A4A80028F1FA /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		3CBE271C2148A4A80028F1FA /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		3CBE273D2148AFA20028F1FA /* SRCUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SRCUIKit.framework; sourceTree = "<group>"; };
-		3CBE273E2148AFA20028F1FA /* SRCFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SRCFoundation.framework; sourceTree = "<group>"; };
 		3CBE276D2148EF500028F1FA /* AppModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppModel.h; sourceTree = "<group>"; };
 		3CBE276E2148EF500028F1FA /* AppModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
 		3CBE27702148F01C0028F1FA /* HomePageUIConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageUIConfig.h; sourceTree = "<group>"; };
@@ -113,8 +113,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CBE27402148AFA20028F1FA /* SRCFoundation.framework in Frameworks */,
-				3CBE273F2148AFA20028F1FA /* SRCUIKit.framework in Frameworks */,
+				3C24E9AD214BE0180026B141 /* SRCFoundation.framework in Frameworks */,
+				3C24E9AC214BE0180026B141 /* SRCUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +166,15 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		3C24E9A9214BE0180026B141 /* ShareLib */ = {
+			isa = PBXGroup;
+			children = (
+				3C24E9AA214BE0180026B141 /* SRCUIKit.framework */,
+				3C24E9AB214BE0180026B141 /* SRCFoundation.framework */,
+			);
+			path = ShareLib;
+			sourceTree = "<group>";
+		};
 		3C77E0802144C04E008BCE36 = {
 			isa = PBXGroup;
 			children = (
@@ -189,7 +198,7 @@
 		3C77E08B2144C04E008BCE36 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				3CBE273C2148AFA20028F1FA /* ShareLib */,
+				3C24E9A9214BE0180026B141 /* ShareLib */,
 				3C1EC08D214600A900815BC1 /* Model */,
 				3C1EC0622145196600815BC1 /* UI */,
 				3C77E08C2144C04E008BCE36 /* AppDelegate.h */,
@@ -232,15 +241,6 @@
 			path = RootViewController;
 			sourceTree = "<group>";
 		};
-		3CBE273C2148AFA20028F1FA /* ShareLib */ = {
-			isa = PBXGroup;
-			children = (
-				3CBE273D2148AFA20028F1FA /* SRCUIKit.framework */,
-				3CBE273E2148AFA20028F1FA /* SRCFoundation.framework */,
-			);
-			path = ShareLib;
-			sourceTree = "<group>";
-		};
 		3CBE276C2148EF3B0028F1FA /* APP */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,8 +271,8 @@
 		3CCEC723214A4B47001CC6B4 /* StreamViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3CCEC724214A4B47001CC6B4 /* StreamViewController.m */,
 				3CCEC725214A4B47001CC6B4 /* StreamViewController.h */,
+				3CCEC724214A4B47001CC6B4 /* StreamViewController.m */,
 			);
 			path = StreamViewController;
 			sourceTree = "<group>";
@@ -633,8 +633,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/News/ShareLib/**",
 					"$(inherited)",
+					"$(PROJECT_DIR)/News/ShareLib/**",
 					"$(PROJECT_DIR)/News/ShareLib",
 				);
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/News/ShareLib/**";
@@ -661,8 +661,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/News/ShareLib/**",
 					"$(inherited)",
+					"$(PROJECT_DIR)/News/ShareLib/**",
 					"$(PROJECT_DIR)/News/ShareLib",
 				);
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/News/ShareLib/**";

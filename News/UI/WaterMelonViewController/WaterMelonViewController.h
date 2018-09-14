@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WaterMelonViewController : UINavigationController
+@interface WaterMelonViewController : UIViewController
 
 @end

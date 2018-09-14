@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddFriendViewController : UINavigationController
+@interface AddFriendViewController : UIViewController
 
 @end

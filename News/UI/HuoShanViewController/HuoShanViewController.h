@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HuoShanViewController : UINavigationController
+@interface HuoShanViewController : UIViewController
 
 @end

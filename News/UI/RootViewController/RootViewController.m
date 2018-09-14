@@ -8,6 +8,8 @@
 
 #import "RootViewController.h"
 #import <SRCFoundation/SRCFoundation.h>
+#import <SRCUIKit/SRCUIKit.h>
+
 #import "AppNetworkModel.h"
 
 #import "StreamViewController.h"
@@ -17,9 +19,13 @@
 #import "AddFriendViewController.h"
 //这里好像还有一个红包页？？
 
+
+#define TABBERBAR_GRAY_COLOR [UIColor colorWithRed:0.31 green:0.31 blue:0.31 alpha:1.0f]
+#define MIAN_GRAY_COLOR [UIColor colorWithRed:1.0 green:0.1 blue:0.1 alpha:1]
+
 #define TAB_VIEW_CONTROLLER_CHANGE      @"tab_view_controller_change"
 #define APP_SETTING_CONFIG     @"tt_app_setting_config"
-
+#define IS_LOGIN      @"is_login"
 
 
 @interface RootViewController ()
@@ -39,6 +45,23 @@
     self=[super init];
     if(self)
     {
+        //初始化TabBar
+        [[UITabBar appearance] setTranslucent:NO];
+        [UITabBar appearance].barTintColor = [UIColor colorWithRed:0.95f green:0.95f blue:0.95f alpha:1.00f];
+        
+        UITabBarItem * item = [UITabBarItem appearance];
+        item.titlePositionAdjustment = UIOffsetMake(0, -5);
+        NSMutableDictionary * normalAtts = [NSMutableDictionary dictionary];
+        normalAtts[NSFontAttributeName] = [UIFont systemFontOfSize:10];
+        normalAtts[NSForegroundColorAttributeName] = TABBERBAR_GRAY_COLOR;
+        [item setTitleTextAttributes:normalAtts forState:UIControlStateNormal];
+        
+        // 选中
+        NSMutableDictionary *selectAtts = [NSMutableDictionary dictionary];
+        selectAtts[NSFontAttributeName] = [UIFont systemFontOfSize:10];
+        selectAtts[NSForegroundColorAttributeName] = MIAN_GRAY_COLOR;
+        [item setTitleTextAttributes:selectAtts forState:UIControlStateSelected];
+        
         //添加一些通知
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarChange:) name:TAB_VIEW_CONTROLLER_CHANGE object:nil];
     }
@@ -68,6 +91,7 @@
 //UI
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
     self.view.backgroundColor=[UIColor whiteColor];
 
@@ -87,32 +111,60 @@
     }
     else
     {
+        [self loadDefaultController];
+        NSLog(@"%@",[self childViewControllers]);
         //这里使用配置的
         NSLog(@"2%@",self.configTabArr);
     }
     
 }
 
-//default UIController
+//default UIController light
 -(void)loadDefaultController
 {
-    StreamViewController *streamViewController = [[StreamViewController alloc] init];
-    
-    UIImage *mainframeImage   = [UIImage imageNamed:@"tabbar_mainframe"];
-    UIImage *mainframeHLImage = [UIImage imageNamed:@"tabbar_mainframeHL"];
-    
-    mainframeViewController.title = @"微信";
-    mainframeViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"微信" image:mainframeImage selectedImage:mainframeHLImage];
-    mainframeViewController.tabBarItem.badgeValue = @"9";
-    mainframeViewController.view.backgroundColor = [UIColor colorWithRed:48 / 255.0 green:67 / 255.0 blue:78 / 255.0 alpha:1];
-    mainframeViewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_add"]
-                                                                                                 style:UIBarButtonItemStylePlain
-                                                                                                target:self
-                                                                                                action:@selector(didClickAddButton:)];
-
+    NSUserDefaults *userDefault=[NSUserDefaults standardUserDefaults];
+    BOOL isLogin=[userDefault objectForKey:IS_LOGIN];
+    [self addViewController:[StreamViewController class] title:@"首页" imageName:@"home_tabbar_32x32_" selectImageName:@"home_tabbar_press_32x32_"];
+    [self addViewController:[WaterMelonViewController class] title:@"西瓜视频" imageName:@"video_tabbar_32x32_" selectImageName:@"video_tabbar_press_32x32_"];
+    [self addViewController:[HuoShanViewController class] title:@"小视频" imageName:@"huoshan_tabbar_32x32_" selectImageName:@"huoshan_tabbar_press_32x32_"];
+    NSString *mineTitle=nil;
+    NSString *mineImageName=nil;
+    NSString *selectImageName=nil;
+    if(isLogin)
+    {
+        mineTitle=@"我的";
+        mineImageName=@"mine_tabbar_32x32_";
+        selectImageName=@"mine_tabbar_press_32x32_";
+    }
+    else
+    {
+        mineTitle=@"未登录";
+        mineImageName=@"no_login_tabbar_32x32_";
+        selectImageName=@"no_login_tabbar_press_32x32_";
+    }
+    [self addViewController:[MineViewController class] title:mineTitle imageName:mineImageName selectImageName:selectImageName];
 }
 
-
+//使用Class 来减少代码数量   明天改这里
+-(void)addViewController:(Class)class title:(NSString *)title imageName:(NSString *)imageName selectImageName:(NSString *)selectImageName
+{
+    if(class&&![NSString safe_isEmpty:title]&&![NSString safe_isEmpty:imageName]&&![NSString safe_isEmpty:selectImageName])
+    {
+        UIViewController *vc=[[class alloc] init];
+        NavViewController *navVC=[[NavViewController alloc] initWithRootViewController:vc];
+        navVC.title=title;
+        UIImage *image=[UIImage imageNamed:imageName];
+        image=[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UIImage *selectImage=[UIImage imageNamed:selectImageName];
+        selectImage=[selectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        navVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:image selectedImage:selectImage];
+        [self addChildViewController:navVC];
+    }
+    else
+    {
+        ERROR();
+    }
+}
 
 //配置tab_config 使用默认的返回no, no的情况下，使用默认的；
 //返回yes的话，使用configTabArr中的数据
