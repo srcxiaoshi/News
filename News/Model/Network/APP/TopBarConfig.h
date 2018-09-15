@@ -9,22 +9,26 @@
 #import <SRCFoundation/SRCFoundation.h>
 #import "TopBarUINormalAndSearch.h"
 
+@protocol TopBarConfig
+
+@end
+
 @interface TopBarConfig : BaseModel
 
-@property(nonatomic,copy)NSString <Optional>*checksum;
+@property(nonatomic,copy)NSString *checksum;
 
-@property(nonatomic,strong)NSNumber <Optional> *end_time;
-@property(nonatomic,strong)NSNumber <Optional> *start_time;
+@property(nonatomic,strong)NSNumber *end_time;
+@property(nonatomic,strong)NSNumber *start_time;
 
-@property(nonatomic,copy)NSArray <NSString *><Optional> *status_bar_color;//["日间色","夜间色"]
+@property(nonatomic,copy)NSArray <NSString *> *status_bar_color;//["日间色","夜间色"]
 @property(nonatomic,assign)BOOL status_use_color;
 
 
-@property(nonatomic,copy)NSString <Optional> *url;
-@property(nonatomic,strong)NSNumber <Optional> *version;
+@property(nonatomic,copy)NSString *url;
+@property(nonatomic,strong)NSNumber *version;
 
-@property(nonatomic,strong)TopBarUINormalAndSearch <Optional> *top_bar_ui_normal;
-@property(nonatomic,strong)TopBarUINormalAndSearch <Optional> *top_bar_ui_search;
+@property(nonatomic,strong)TopBarUINormalAndSearch *top_bar_ui_normal;
+@property(nonatomic,strong)TopBarUINormalAndSearch *top_bar_ui_search;
 
 
 @end

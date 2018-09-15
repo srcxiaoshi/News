@@ -10,11 +10,14 @@
 #import "TabConfig.h"
 #import "TopBarConfig.h"
 
+@protocol HomePageUIConfig
+
+@end
 
 @interface HomePageUIConfig : BaseModel
 
 @property(nonatomic,assign)BOOL is_single_valid;
-@property(nonatomic,strong)TabConfig <Optional> *tab_config;
-@property(nonatomic,strong)TopBarConfig <Optional> *top_bar_config;
+@property(nonatomic,strong)TabConfig *tab_config;
+@property(nonatomic,strong)TopBarConfig *top_bar_config;
 
 @end

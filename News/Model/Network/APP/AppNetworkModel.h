@@ -9,9 +9,13 @@
 #import <SRCFoundation/SRCFoundation.h>
 #import "AppDataModel.h"
 
+@protocol AppNetworkModel
+
+@end
+
 @interface AppNetworkModel : BaseModel
 
-@property(nonatomic,strong)AppDataModel <Optional>*data;
+@property(nonatomic,strong)AppDataModel *data;
 
 
 //

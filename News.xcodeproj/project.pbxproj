@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3C1EC0D2214614E500815BC1 /* NetworkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1EC0D1214614E500815BC1 /* NetworkModel.m */; };
-		3C24E9AC214BE0180026B141 /* SRCUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C24E9AA214BE0180026B141 /* SRCUIKit.framework */; };
-		3C24E9AD214BE0180026B141 /* SRCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C24E9AB214BE0180026B141 /* SRCFoundation.framework */; };
+		3C2EC711214CB28600E38C7C /* SRCUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2EC70F214CB28600E38C7C /* SRCUIKit.framework */; };
+		3C2EC712214CB28600E38C7C /* SRCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2EC710214CB28600E38C7C /* SRCFoundation.framework */; };
 		3C77E08E2144C04E008BCE36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C77E08D2144C04E008BCE36 /* AppDelegate.m */; };
 		3C77E0912144C04E008BCE36 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C77E0902144C04E008BCE36 /* ViewController.m */; };
 		3C77E0942144C04E008BCE36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C77E0922144C04E008BCE36 /* Main.storyboard */; };
@@ -56,8 +56,8 @@
 /* Begin PBXFileReference section */
 		3C1EC0D0214614E500815BC1 /* NetworkModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkModel.h; sourceTree = "<group>"; };
 		3C1EC0D1214614E500815BC1 /* NetworkModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkModel.m; sourceTree = "<group>"; };
-		3C24E9AA214BE0180026B141 /* SRCUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SRCUIKit.framework; sourceTree = "<group>"; };
-		3C24E9AB214BE0180026B141 /* SRCFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SRCFoundation.framework; sourceTree = "<group>"; };
+		3C2EC70F214CB28600E38C7C /* SRCUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SRCUIKit.framework; sourceTree = "<group>"; };
+		3C2EC710214CB28600E38C7C /* SRCFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SRCFoundation.framework; sourceTree = "<group>"; };
 		3C77E0892144C04E008BCE36 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C77E08C2144C04E008BCE36 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3C77E08D2144C04E008BCE36 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -113,8 +113,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C24E9AD214BE0180026B141 /* SRCFoundation.framework in Frameworks */,
-				3C24E9AC214BE0180026B141 /* SRCUIKit.framework in Frameworks */,
+				3C2EC712214CB28600E38C7C /* SRCFoundation.framework in Frameworks */,
+				3C2EC711214CB28600E38C7C /* SRCUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,11 +166,11 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		3C24E9A9214BE0180026B141 /* ShareLib */ = {
+		3C2EC70E214CB28600E38C7C /* ShareLib */ = {
 			isa = PBXGroup;
 			children = (
-				3C24E9AA214BE0180026B141 /* SRCUIKit.framework */,
-				3C24E9AB214BE0180026B141 /* SRCFoundation.framework */,
+				3C2EC70F214CB28600E38C7C /* SRCUIKit.framework */,
+				3C2EC710214CB28600E38C7C /* SRCFoundation.framework */,
 			);
 			path = ShareLib;
 			sourceTree = "<group>";
@@ -198,7 +198,7 @@
 		3C77E08B2144C04E008BCE36 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				3C24E9A9214BE0180026B141 /* ShareLib */,
+				3C2EC70E214CB28600E38C7C /* ShareLib */,
 				3C1EC08D214600A900815BC1 /* Model */,
 				3C1EC0622145196600815BC1 /* UI */,
 				3C77E08C2144C04E008BCE36 /* AppDelegate.h */,
@@ -650,7 +650,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Src.News;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/News/ShareLib/**";
 			};
 			name = Debug;
@@ -678,7 +678,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Src.News;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/News/ShareLib/**";
 			};
 			name = Release;

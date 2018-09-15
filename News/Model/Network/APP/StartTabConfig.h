@@ -9,11 +9,15 @@
 #import <SRCFoundation/SRCFoundation.h>
 #import "TabItemModel.h"
 
+@protocol StartTabConfig
+
+@end
+
 @interface StartTabConfig : BaseModel
 
-@property(nonatomic,strong)NSNumber <Optional> *expired_time;
+@property(nonatomic,strong)NSNumber *expired_time;
 
-@property(nonatomic,strong)NSArray <TabItemModel *><Optional> *tab_config;//TabItemModel
+@property(nonatomic,strong)NSArray <TabItemModel> *tab_config;//TabItemModel
 
 
 @end

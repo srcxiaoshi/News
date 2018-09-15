@@ -7,9 +7,13 @@
 //
 
 #import <SRCFoundation/SRCFoundation.h>
+@protocol TabConfig
+
+@end
+
 
 @interface TabConfig : BaseModel
 
-@property(nonatomic,strong)NSNumber <Optional> *version;
+@property(nonatomic,strong)NSNumber *version;
 
 @end

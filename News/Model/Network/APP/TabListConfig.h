@@ -9,8 +9,11 @@
 #import <SRCFoundation/SRCFoundation.h>
 #import "TabItemModel.h"
 
+@protocol TabListConfig
+
+@end
 
 @interface TabListConfig : BaseModel
-@property(nonatomic,strong)TabItemModel <Optional> *middle_tab;
-@property(nonatomic,copy) NSArray <NSString *><Optional> *normal_tabs;
+@property(nonatomic,strong)TabItemModel *middle_tab;
+@property(nonatomic,copy) NSArray <NSString *> *normal_tabs;
 @end

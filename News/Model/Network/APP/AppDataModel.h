@@ -9,10 +9,13 @@
 #import <SRCFoundation/SRCFoundation.h>
 #import "AppModel.h"
 
+@protocol AppDataModel
+
+@end
 
 @interface AppDataModel : BaseModel
 
-@property(nonatomic,strong) AppModel<Optional> *app;
+@property(nonatomic,strong) AppModel *app;
 
 //"default":{
 //    "apn_notify":1,

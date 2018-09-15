@@ -8,10 +8,14 @@
 
 #import <SRCFoundation/SRCFoundation.h>
 
+@protocol TabItemModel
+
+@end
+
 @interface TabItemModel : BaseModel
 
-@property(nonatomic,copy)NSString <Optional> *tab_name;
-@property(nonatomic,strong)NSNumber <Optional> *tab_priority;
-@property(nonatomic,copy)NSString <Optional> *url;
+@property(nonatomic,copy)NSString *tab_name;
+@property(nonatomic,strong)NSNumber *tab_priority;
+@property(nonatomic,copy)NSString *url;
 
 @end

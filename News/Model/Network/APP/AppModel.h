@@ -11,15 +11,18 @@
 #import "StartTabConfig.h"
 #import "TabListConfig.h"
 
+@protocol AppModel
+
+@end
 
 @interface AppModel : BaseModel
 
 //home
-@property(nonatomic,strong)HomePageUIConfig <Optional>* home_page_ui_config;
+@property(nonatomic,strong)HomePageUIConfig *home_page_ui_config;
 
 //tab 用这两个来处理tab
-@property(nonatomic,strong)StartTabConfig <Optional>* tt_start_tab_config;
-@property(nonatomic,strong)TabListConfig <Optional> * tt_tab_list_config;
+@property(nonatomic,strong)StartTabConfig *tt_start_tab_config;
+@property(nonatomic,strong)TabListConfig *tt_tab_list_config;
 
 
 
