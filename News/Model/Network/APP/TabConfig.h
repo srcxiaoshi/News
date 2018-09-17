@@ -7,10 +7,6 @@
 //
 
 #import <SRCFoundation/SRCFoundation.h>
-@protocol TabConfig
-
-@end
-
 
 @interface TabConfig : BaseModel
 

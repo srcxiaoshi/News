@@ -8,9 +8,6 @@
 
 #import <SRCFoundation/SRCFoundation.h>
 
-@protocol TabItemModel
-
-@end
 
 @interface TabItemModel : BaseModel
 

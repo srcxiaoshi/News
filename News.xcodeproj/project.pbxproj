@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C1EC0D2214614E500815BC1 /* NetworkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1EC0D1214614E500815BC1 /* NetworkModel.m */; };
-		3C2EC711214CB28600E38C7C /* SRCUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2EC70F214CB28600E38C7C /* SRCUIKit.framework */; };
-		3C2EC712214CB28600E38C7C /* SRCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2EC710214CB28600E38C7C /* SRCFoundation.framework */; };
 		3C2EC716214CB7A500E38C7C /* StreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2EC714214CB7A400E38C7C /* StreamViewController.m */; };
+		3C6C7533214F4263003B5AFD /* SRCUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6C7531214F4263003B5AFD /* SRCUIKit.framework */; };
+		3C6C7534214F4263003B5AFD /* SRCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6C7532214F4263003B5AFD /* SRCFoundation.framework */; };
 		3C77E08E2144C04E008BCE36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C77E08D2144C04E008BCE36 /* AppDelegate.m */; };
 		3C77E0912144C04E008BCE36 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C77E0902144C04E008BCE36 /* ViewController.m */; };
 		3C77E0942144C04E008BCE36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C77E0922144C04E008BCE36 /* Main.storyboard */; };
@@ -19,6 +18,8 @@
 		3C77E09C2144C050008BCE36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C77E09B2144C050008BCE36 /* main.m */; };
 		3C77E0A62144C050008BCE36 /* NewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C77E0A52144C050008BCE36 /* NewsTests.m */; };
 		3C77E0B12144C050008BCE36 /* NewsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C77E0B02144C050008BCE36 /* NewsUITests.m */; };
+		3C7E2342214E4FBA00267E41 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7E2341214E4FBA00267E41 /* BaseViewController.m */; };
+		3C7E2347214E52B500267E41 /* HomepageSuggestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7E2346214E52B500267E41 /* HomepageSuggestModel.m */; };
 		3CBE271D2148A4A80028F1FA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE271B2148A4A80028F1FA /* RootViewController.m */; };
 		3CBE276F2148EF500028F1FA /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE276E2148EF500028F1FA /* AppModel.m */; };
 		3CBE27722148F01C0028F1FA /* HomePageUIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE27712148F01C0028F1FA /* HomePageUIConfig.m */; };
@@ -54,12 +55,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3C1EC0D0214614E500815BC1 /* NetworkModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkModel.h; sourceTree = "<group>"; };
-		3C1EC0D1214614E500815BC1 /* NetworkModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkModel.m; sourceTree = "<group>"; };
-		3C2EC70F214CB28600E38C7C /* SRCUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SRCUIKit.framework; sourceTree = "<group>"; };
-		3C2EC710214CB28600E38C7C /* SRCFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SRCFoundation.framework; sourceTree = "<group>"; };
 		3C2EC714214CB7A400E38C7C /* StreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamViewController.m; sourceTree = "<group>"; };
 		3C2EC715214CB7A400E38C7C /* StreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamViewController.h; sourceTree = "<group>"; };
+		3C6C7531214F4263003B5AFD /* SRCUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SRCUIKit.framework; sourceTree = "<group>"; };
+		3C6C7532214F4263003B5AFD /* SRCFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SRCFoundation.framework; sourceTree = "<group>"; };
 		3C77E0892144C04E008BCE36 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C77E08C2144C04E008BCE36 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3C77E08D2144C04E008BCE36 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -76,6 +75,10 @@
 		3C77E0AC2144C050008BCE36 /* NewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C77E0B02144C050008BCE36 /* NewsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsUITests.m; sourceTree = "<group>"; };
 		3C77E0B22144C050008BCE36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C7E2340214E4FBA00267E41 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		3C7E2341214E4FBA00267E41 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		3C7E2345214E52B500267E41 /* HomepageSuggestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomepageSuggestModel.h; sourceTree = "<group>"; };
+		3C7E2346214E52B500267E41 /* HomepageSuggestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomepageSuggestModel.m; sourceTree = "<group>"; };
 		3CBE271B2148A4A80028F1FA /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		3CBE271C2148A4A80028F1FA /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		3CBE276D2148EF500028F1FA /* AppModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppModel.h; sourceTree = "<group>"; };
@@ -113,8 +116,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C2EC712214CB28600E38C7C /* SRCFoundation.framework in Frameworks */,
-				3C2EC711214CB28600E38C7C /* SRCUIKit.framework in Frameworks */,
+				3C6C7534214F4263003B5AFD /* SRCFoundation.framework in Frameworks */,
+				3C6C7533214F4263003B5AFD /* SRCUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +141,7 @@
 		3C1EC0622145196600815BC1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3C7E233F214E4FA800267E41 /* BaseViewController */,
 				3C2EC713214CB7A400E38C7C /* StreamViewController */,
 				3CCEC728214A4C2D001CC6B4 /* AddFriendViewController */,
 				3CCEC72A214A4C63001CC6B4 /* HuoShanViewController */,
@@ -151,6 +155,7 @@
 		3C1EC08D214600A900815BC1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3C7E2343214E526B00267E41 /* Search */,
 				3C1EC0CF214614CE00815BC1 /* Network */,
 			);
 			path = Model;
@@ -160,28 +165,26 @@
 			isa = PBXGroup;
 			children = (
 				3CBE276C2148EF3B0028F1FA /* APP */,
-				3C1EC0D0214614E500815BC1 /* NetworkModel.h */,
-				3C1EC0D1214614E500815BC1 /* NetworkModel.m */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		3C2EC70E214CB28600E38C7C /* ShareLib */ = {
-			isa = PBXGroup;
-			children = (
-				3C2EC70F214CB28600E38C7C /* SRCUIKit.framework */,
-				3C2EC710214CB28600E38C7C /* SRCFoundation.framework */,
-			);
-			path = ShareLib;
 			sourceTree = "<group>";
 		};
 		3C2EC713214CB7A400E38C7C /* StreamViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3C2EC714214CB7A400E38C7C /* StreamViewController.m */,
 				3C2EC715214CB7A400E38C7C /* StreamViewController.h */,
+				3C2EC714214CB7A400E38C7C /* StreamViewController.m */,
 			);
 			path = StreamViewController;
+			sourceTree = "<group>";
+		};
+		3C6C7530214F4263003B5AFD /* ShareLib */ = {
+			isa = PBXGroup;
+			children = (
+				3C6C7531214F4263003B5AFD /* SRCUIKit.framework */,
+				3C6C7532214F4263003B5AFD /* SRCFoundation.framework */,
+			);
+			path = ShareLib;
 			sourceTree = "<group>";
 		};
 		3C77E0802144C04E008BCE36 = {
@@ -207,7 +210,7 @@
 		3C77E08B2144C04E008BCE36 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				3C2EC70E214CB28600E38C7C /* ShareLib */,
+				3C6C7530214F4263003B5AFD /* ShareLib */,
 				3C1EC08D214600A900815BC1 /* Model */,
 				3C1EC0622145196600815BC1 /* UI */,
 				3C77E08C2144C04E008BCE36 /* AppDelegate.h */,
@@ -239,6 +242,32 @@
 				3C77E0B22144C050008BCE36 /* Info.plist */,
 			);
 			path = NewsUITests;
+			sourceTree = "<group>";
+		};
+		3C7E233F214E4FA800267E41 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3C7E2340214E4FBA00267E41 /* BaseViewController.h */,
+				3C7E2341214E4FBA00267E41 /* BaseViewController.m */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		3C7E2343214E526B00267E41 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				3C7E2344214E528200267E41 /* Suggest */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		3C7E2344214E528200267E41 /* Suggest */ = {
+			isa = PBXGroup;
+			children = (
+				3C7E2345214E52B500267E41 /* HomepageSuggestModel.h */,
+				3C7E2346214E52B500267E41 /* HomepageSuggestModel.m */,
+			);
+			path = Suggest;
 			sourceTree = "<group>";
 		};
 		3CBE271A2148A4A80028F1FA /* RootViewController */ = {
@@ -451,17 +480,18 @@
 				3C77E09C2144C050008BCE36 /* main.m in Sources */,
 				3CCEC733214A4C97001CC6B4 /* MineViewController.m in Sources */,
 				3CBE27752148F0850028F1FA /* TabConfig.m in Sources */,
+				3C7E2347214E52B500267E41 /* HomepageSuggestModel.m in Sources */,
 				3CCEC72D214A4C7C001CC6B4 /* AddFriendViewController.m in Sources */,
 				3CBE27722148F01C0028F1FA /* HomePageUIConfig.m in Sources */,
 				3CCEC730214A4C8A001CC6B4 /* HuoShanViewController.m in Sources */,
 				3CBE278B21490E3B0028F1FA /* AppDataModel.m in Sources */,
 				3C2EC716214CB7A500E38C7C /* StreamViewController.m in Sources */,
 				3CBE277B2148F1B20028F1FA /* TopBarUINormalAndSearch.m in Sources */,
-				3C1EC0D2214614E500815BC1 /* NetworkModel.m in Sources */,
 				3CCEC736214A4CA8001CC6B4 /* WaterMelonViewController.m in Sources */,
 				3CBE2784214902C20028F1FA /* TabItemModel.m in Sources */,
 				3C77E08E2144C04E008BCE36 /* AppDelegate.m in Sources */,
 				3CBE27812148FFC40028F1FA /* StartTabConfig.m in Sources */,
+				3C7E2342214E4FBA00267E41 /* BaseViewController.m in Sources */,
 				3CBE271D2148A4A80028F1FA /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

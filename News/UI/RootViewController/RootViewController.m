@@ -21,7 +21,7 @@
 
 
 #define TABBERBAR_GRAY_COLOR    [UIColor colorWithRed:0.31 green:0.31 blue:0.31 alpha:1.0f]
-#define MIAN_GRAY_COLOR     [UIColor colorWithRed:1.0 green:0.1 blue:0.1 alpha:1]
+#define MIAN_RED_COLOR     [UIColor colorWithRed:1.0 green:0.1 blue:0.1 alpha:1]
 #define TAB_BAR_TINT_COLOR      [UIColor colorWithRed:0.95f green:0.95f blue:0.95f alpha:1.00f]
 
 
@@ -64,7 +64,7 @@
         // selected
         NSMutableDictionary *selectAtts = [NSMutableDictionary new];
         [selectAtts safe_setObject:[UIFont systemFontOfSize:10] forKey:NSFontAttributeName];
-        [selectAtts safe_setObject:MIAN_GRAY_COLOR forKey:NSForegroundColorAttributeName];
+        [selectAtts safe_setObject:MIAN_RED_COLOR forKey:NSForegroundColorAttributeName];
         [item setTitleTextAttributes:selectAtts forState:UIControlStateSelected];
         
         //添加一些通知
@@ -238,8 +238,8 @@
     if(class&&![NSString safe_isEmpty:title]&&![NSString safe_isEmpty:imageName]&&![NSString safe_isEmpty:selectImageName])
     {
         UIViewController *vc=[[class alloc] init];
-        NavViewController *navVC=[[NavViewController alloc] initWithRootViewController:vc];
-        navVC.title=title;
+        SRCNavViewController *navVC=[[SRCNavViewController alloc] initWithRootViewController:vc];
+        //navVC.title=title;
         UIImage *image=[UIImage imageNamed:imageName];
         image=[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         UIImage *selectImage=[UIImage imageNamed:selectImageName];
@@ -271,6 +271,7 @@
                 {
                     __autoreleasing JSONModelError *err=nil;
                     AppNetworkModel *model=[[AppNetworkModel alloc] safe_initWithString:response error:&err];
+                    
                     if(model)
                     {
                         //这里要讲需要的setting写到userDefault中
@@ -298,6 +299,7 @@
         //将data转成对象
         __autoreleasing JSONModelError *err=nil;
         AppNetworkModel *appModel=[[AppNetworkModel alloc] safe_initWithString:stringData error:&err];
+        
         if(err)
         {
             //这里是解析错误，需要json解析查找问题，或者重新解析？?
@@ -370,19 +372,6 @@
         return NO;
     }
     
-}
-
-
-
-//重新处理tabBar
--(void)resolveTabBarStyle:(NSArray *)tabBarItems
-{
-    if(tabBarItems&&[tabBarItems count]>0)
-    {
-        int i = 0;
-        NSMutableArray *tabItemArr=self.configTabArr;
-        
-    }
 }
 
 //处理notification

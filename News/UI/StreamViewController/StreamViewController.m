@@ -7,6 +7,8 @@
 //
 
 #import "StreamViewController.h"
+#import <SRCUIKit/SRCUIKit.h>
+
 
 @interface StreamViewController ()
 
@@ -17,7 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

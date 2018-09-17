@@ -8,11 +8,6 @@
 
 #import <SRCFoundation/SRCFoundation.h>
 
-@protocol TopBarUINormalAndSearch
-
-
-@end
-
 @interface TopBarUINormalAndSearch : BaseModel
 
 @property(nonatomic,assign)BOOL status_bar_light;

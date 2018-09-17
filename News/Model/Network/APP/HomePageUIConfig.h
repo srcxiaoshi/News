@@ -10,9 +10,6 @@
 #import "TabConfig.h"
 #import "TopBarConfig.h"
 
-@protocol HomePageUIConfig
-
-@end
 
 @interface HomePageUIConfig : BaseModel
 

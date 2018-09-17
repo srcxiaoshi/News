@@ -11,9 +11,6 @@
 #import "StartTabConfig.h"
 #import "TabListConfig.h"
 
-@protocol AppModel
-
-@end
 
 @interface AppModel : BaseModel
 

@@ -9,9 +9,6 @@
 #import <SRCFoundation/SRCFoundation.h>
 #import "TabItemModel.h"
 
-@protocol TabListConfig
-
-@end
 
 @interface TabListConfig : BaseModel
 @property(nonatomic,strong)TabItemModel *middle_tab;

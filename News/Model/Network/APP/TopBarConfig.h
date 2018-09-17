@@ -9,9 +9,6 @@
 #import <SRCFoundation/SRCFoundation.h>
 #import "TopBarUINormalAndSearch.h"
 
-@protocol TopBarConfig
-
-@end
 
 @interface TopBarConfig : BaseModel
 

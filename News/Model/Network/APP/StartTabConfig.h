@@ -9,9 +9,7 @@
 #import <SRCFoundation/SRCFoundation.h>
 #import "TabItemModel.h"
 
-@protocol StartTabConfig
-
-@end
+@protocol TabItemModel;
 
 @interface StartTabConfig : BaseModel
 
