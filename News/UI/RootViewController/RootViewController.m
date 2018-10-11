@@ -7,7 +7,6 @@
 //
 
 #import "RootViewController.h"
-#import <SRCFoundation/SRCFoundation.h>
 #import <SRCUIKit/SRCUIKit.h>
 
 #import "AppNetworkModel.h"
@@ -104,7 +103,7 @@
     [ServerTimestamp getServerTimestamp:^(BOOL isSuccess, BaseModel *baseModel) {
         if(isSuccess)
         {
-            NSLog(@"%@",baseModel.message);
+            NSLog(@"rootview=%@",baseModel.message);
         }
     }];
     
@@ -269,18 +268,11 @@
             [SRCNetworkWithAF requestGetMethodWithPath:@"https://is.snssdk.com/service/settings/v2/" parameters:nil withProgress:nil success:^(BOOL isSuccess, NSString *response) {
                 if(![NSString safe_isEmpty:response])
                 {
-                    __autoreleasing JSONModelError *err=nil;
-                    AppNetworkModel *model=[[AppNetworkModel alloc] safe_initWithString:response error:&err];
-                    
+                    AppNetworkModel *model=[[AppNetworkModel alloc] safe_initWithString:response];
                     if(model)
                     {
                         //这里要讲需要的setting写到userDefault中
                         [userDefault setObject:response forKey:APP_SETTING_CONFIG];
-                    }
-                    if(err)
-                    {
-                        //这里是解析错误，需要json解析查找问题，或者重新解析？?
-                        NSLog(@"err=%@",err);
                     }
                 }
 
@@ -297,13 +289,10 @@
     else
     {
         //将data转成对象
-        __autoreleasing JSONModelError *err=nil;
-        AppNetworkModel *appModel=[[AppNetworkModel alloc] safe_initWithString:stringData error:&err];
-        
-        if(err)
+        AppNetworkModel *appModel=[[AppNetworkModel alloc] safe_initWithString:stringData];
+        if(!appModel)
         {
             //这里是解析错误，需要json解析查找问题，或者重新解析？?
-            NSLog(@"err=%@",err);
             return NO;
         }
          if(appModel&&appModel.data&&appModel.data.app.tt_start_tab_config&&appModel.data.app.tt_tab_list_config)

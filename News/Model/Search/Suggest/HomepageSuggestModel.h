@@ -7,7 +7,10 @@
 //
 
 #import <SRCFoundation/SRCFoundation.h>
+#import "SuggestDataModel.h"
 
 @interface HomepageSuggestModel : BaseModel
+
+@property(nonatomic,strong)SuggestDataModel *data;
 
 @end

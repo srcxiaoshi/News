@@ -16,4 +16,8 @@
 //从url字符串里面获取参数
 -(NSDictionary *)URL_paramsFromURLString;
 
+//从url字符串里面获取文件名字和后缀
+-(NSString *)URL_fileNameFromURLString;
+
+
 @end

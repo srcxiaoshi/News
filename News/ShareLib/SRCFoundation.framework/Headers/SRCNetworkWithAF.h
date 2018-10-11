@@ -110,7 +110,19 @@ typedef NS_ENUM(NSInteger, SRCNetworkReachabilityStatus) {
 +(NSString *)reachAbilityString;
 
  
- 
+/**
+ * 根据url下载image 返回task
+ *
+ **/
++(NSURLSessionTask *)downloadFileWithURL:(NSURL *)url prograss:(void(^) (float prograss))prograssBlock completion:(void(^)(NSURL *filepath))completionBlock;
+
+
+/**
+ *  取消对应的任务
+ *
+ */
++(void)cancelTask:(NSURLSessionTask *)task;
+
 
 
 @end

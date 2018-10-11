@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class SuggestWordModel;
+
 @interface BaseViewController : UIViewController
+
+-(void)updateSearchAndSuggestWithString:(SuggestWordModel *)model;
 
 @end
